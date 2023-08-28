@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Info</title>
+  <style>
+  table, th, td {
+    border: 1px solid black;
+  }
+  </style>
+</head>
+<body>
+ <h1> All Students </h1> 
+ <table>
+ <caption style="text-align:center"> Student Population </caption>
+   <tr>
+     <th style="background-color: lightgray" width="200px"> Name </th>
+     <th style="background-color: lightgray" width="200px"> ID </th>
+     <th style="background-color: lightgray" width="200px"> Email </th>
+   </tr>
+  <% students.forEach(function(student) { %>
+    <tr>
+      <td style="text-indent:10px">
+      <%= student.name %>
+      </td>
+      <td style="text-align:center">
+      <%= student.id %>
+      </td>
+      <td style="text-align:right; padding-right:10px">
+      <%= student.email %>
+      </td>
+    </tr>
+  <% });  %>
+  </table>
+</body>
+</html>
